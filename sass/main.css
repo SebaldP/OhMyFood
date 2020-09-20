@@ -249,7 +249,7 @@ header img {
 }
 
 #restaurants__the_full_palette--image {
-  background-image: url(/images/restaurants/the_full_palette.jpg);
+  background-image: url(../images/restaurants/the_full_palette.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 25vh;
@@ -270,7 +270,7 @@ header img {
 }
 
 #restaurants__the_enchanted_plate--image {
-  background-image: url(/images/restaurants/the_enchanted_plate.jpg);
+  background-image: url(../images/restaurants/the_enchanted_plate.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 25vh;
@@ -291,7 +291,7 @@ header img {
 }
 
 #restaurants__bastille--image {
-  background-image: url(/images/restaurants/bastille.jpg);
+  background-image: url(../images/restaurants/bastille.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 25vh;
@@ -300,7 +300,7 @@ header img {
 }
 
 #restaurants__le_gourmand--image {
-  background-image: url(/images/restaurants/le_gourmand.jpg);
+  background-image: url(../images/restaurants/le_gourmand.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 25vh;

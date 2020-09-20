@@ -129,6 +129,8 @@ header img {
 #menu h2 {
   font-size: 1.2rem;
   font-weight: lighter;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 #menu h2::after {
@@ -137,6 +139,12 @@ header img {
   background-color: #99E2D0;
   height: .2rem;
   width: 3rem;
+}
+
+#menu .menu__content__entrees__plates:nth-child(n+1),
+#menu .menu__content__main_dishes__plates:nth-child(n+1),
+#menu .menu__content__desserts__plates:nth-child(n+1) {
+  margin-top: 1rem;
 }
 
 #menu .menu__content__entrees__plates, #menu .menu__content__main_dishes__plates, #menu .menu__content__desserts__plates {

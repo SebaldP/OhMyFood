@@ -3,57 +3,43 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Oh My Food! - Home</title>
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo/title_logo@600x.png" />
+        <title>Oh My Food! - The Full Palette</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo/ohmyfood.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/font_awesome_5_free.css">
-        <link rel="stylesheet" type="text/css" href="sass/main.css" />
+        <link rel="stylesheet" href="/css/font_awesome_5_free.css">
+        <link rel="stylesheet" type="text/css" href="../sass/6-pages/menu.css" />
         <meta property="og:title" content="Oh My Food!" />
         <meta property="og:type" content="Curriculum Vitae" />
-        <meta property="og:url" content="https://sebaldp.github.io/OhMyFood/" />
+        <meta property="og:url" content="" />
         <meta property="og:image" content="https://sebaldp.github.io/OhMyFood/images/logo/ohmyfood.png" />
-        <meta property="og:description" content="Bienvenue sur 'Oh My Food!', le site vous permettant de réserver une table de votre restaurant préféré en quelques clics!" />
+        <meta property="og:description" content="Bienvenue sur 'Oh My Food!', nous vous présentons le menu La palette du goût du restaurant The Full Palette!" />
         <meta property="og:site_name" content="Oh My Food!" />
     </head>
     <body>
         <header>
-            <img src="images/logo/ohmyfood@2x.svg" />
+            <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            <img src="../images/logo/ohmyfood@2x.svg" />
         </header>
-        <section id="exploration">
-            <div id="exploration__place">
-                <p>Paris, Belleville</p>
+        <div id="background_image">
+            <img src="../images/restaurants/the_full_palette.jpg" alt="Photographie des plats proposés par le restautant The Full Palette.">
+        </div>
+        <section id="menu">
+            <h1 id="menu__restaurant">The Full Palette</h1>
+            <div id="menu__content">
+                <h2 id="menu__content__entrees">ENTREES</h2>
+                <div class="menu__content__entrees__plates"><h3 class="menu__content__entrees__plates__name">Escargot</h3><div class="menu--flex"><p class="menu__content__entrees__plates__description">With southern French spices</p><h4 class="menu__content__entrees__plates__price">25€</h4></div></div>
+                <div class="menu__content__entrees__plates"><h3 class="menu__content__entrees__plates__name">Duck Foie Gras</h3><div class="menu--flex"><p class="menu__content__entrees__plates__description">With black truffle shavings</p><h4 class="menu__content__entrees__plates__price">35€</h4></div></div>
+                <div class="menu__content__entrees__plates"><h3 class="menu__content__entrees__plates__name">Fried egg</h3><div class="menu--flex"><p class="menu__content__entrees__plates__description">...</p><h4 class="menu__content__entrees__plates__price">20€</h4></div></div>
+                <h2 id="menu__content__main_dishes">MAIN DISH</h2>
+                <div class="menu__content__main_dishes__plates"><h3 class="menu__content__main_dishes__plates__name">Herb-Encrusted Steak</h3><div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With delicately sliced and seasoned vegetables</p><h4 class="menu__content__main_dishes__plates__price">40€</h4></div></div>
+                <div class="menu__content__main_dishes__plates"><h3 class="menu__content__main_dishes__plates__name">Ox Tail Shepard's Pie</h3><div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With black truffle and pureed parsnips</p><h4 class="menu__content__main_dishes__plates__price">35€</h4></div></div>
+                <div class="menu__content__main_dishes__plates"><h3 class="menu__content__main_dishes__plates__name">Filet of Sole</h3><div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With citrus dressing</p><h4 class="menu__content__main_dishes__plates__price">44€</h4></div></div>
+                <h2 id="menu__content__desserts">DESSERTS</h2>
+                <div class="menu__content__desserts__plates"><h3 class="menu__content__desserts__plates__name">Paris-Brest</h3><div class="menu--flex"><p class="menu__content__desserts__plates__description">Revisited</p><h4 class="menu__content__desserts__plates__price">18€</h4></div></div>
+                <div class="menu__content__desserts__plates"><h3 class="menu__content__desserts__plates__name">Chocolate Macaroons</h3><div class="menu--flex"><p class="menu__content__desserts__plates__description">With vanilla ice cream</p><h4 class="menu__content__desserts__plates__price">22€</h4></div></div>
+                <div class="menu__content__desserts__plates"><h3 class="menu__content__desserts__plates__name">Chocolate Mousse</h3><div class="menu--flex"><p class="menu__content__desserts__plates__description">With spices and black truffle</p><h4 class="menu__content__desserts__plates__price">23€</h4></div></div>
             </div>
-            <div id="exploration__tool">
-                <h1>Book the menu you like</h1>
-                <p>Discover top-of-the-art restaurants we picked for you</p>
-                <a><span id="exploration__tool--button">Explore our restaurants</span></a>
-            </div>
-        </section>
-        <section id="instructions">
-            <h1 id="instructions__title">How it works</h1>
-            <div id="instructions__first" class="instructions__windows"><p>Chose a restaurant</p></div>
-            <div id="instructions__second" class="instructions__windows"><p>Create your menu</p></div>
-            <div id="instructions__third" class="instructions__windows"><p>Go enjoy it at the restaurant</p></div>
-        </section>
-        <section id="restaurants">
-            <h1 id="restaurants__title">Restaurants</h1>
-            <div id="restaurants__the_full_palette" class="restaurants__windows">
-                <div id="restaurants__the_full_palette--image"><h3 class="restaurants__windows--new">New</h3></div>
-                <div class="restaurants--text"><a href="/pages/the_full_palette.html"><h2>The Full Palette</h2><p>New York</p></a></div>
-            </div>
-            <div id="restaurants__the_enchanted_plate" class="restaurants__windows">
-                <div id="restaurants__the_enchanted_plate--image"><h3 class="restaurants__windows--new">New</h3></div>
-                <div class="restaurants--text"><a href="/pages/the_enchanted_plate.html"><h2>The Enchanted Plate</h2><p>New York</p></a></div>
-            </div>
-            <div id="restaurants__bastille" class="restaurants__windows">
-                <div id="restaurants__bastille--image"></div>
-                <div class="restaurants--text"><a href="/pages/bastille.html"><h2>Bastille</h2><p>New York</p></a></div>
-            </div>
-            <div id="restaurants__le_gourmand" class="restaurants__windows">
-                <div id="restaurants__le_gourmand--image"></div>
-                <div class="restaurants--text"><a href="/pages/le_gourmand.html"><h2>Le Gourmand</h2><p>New York</p></a></div>
-            </div>
-
+            <a><span id="menu__order--button">Order</span></a>
         </section>
         <footer>
             <svg viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg">

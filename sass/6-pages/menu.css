@@ -1,3 +1,73 @@
+@-webkit-keyframes fadeInWhite {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInWhite {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes BlockEntry {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes BlockEntry {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes Apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -28,43 +98,43 @@ html {
 
 @font-face {
   font-family: "Shrikhand";
-  src: url("/font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../../font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/font/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: bold;
-  src: url("/font/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: bolder;
-  src: url("/font/Roboto/Roboto-Black.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
-  src: url("/font/Roboto/Roboto-Italic.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-Italic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: bold;
   font-style: italic;
-  src: url("/font/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: lighter;
-  src: url("/font/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url("../../font/Roboto/Roboto-Light.ttf") format("truetype");
 }
 
 body {
@@ -142,25 +212,98 @@ header img {
 #menu__restaurant {
   font-family: "Shrikhand";
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   margin-left: .6rem;
 }
 
-#menu h2 {
+#menu fieldset {
+  border: 0;
+}
+
+#menu legend {
   font-size: 1.2rem;
   font-weight: lighter;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
   margin-left: .6rem;
+  -webkit-animation-name: Apparition;
+          animation-name: Apparition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-#menu h2::after {
+#menu legend:nth-of-type(1) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+#menu legend:nth-of-type(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#menu legend:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#menu legend::after {
   content: '';
   display: block;
   background-color: #99E2D0;
   height: .2rem;
   width: 3rem;
   margin-top: .3rem;
+  -webkit-animation-name: BlockEntry;
+          animation-name: BlockEntry;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#menu legend::after:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+#menu legend::after:nth-of-type(2) {
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+}
+
+#menu legend::after:nth-of-type(3) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+#menu h2 {
+  font-size: 1.6rem;
+}
+
+#menu .menu__content__entrees__plates,
+#menu .menu__content__main_dishes__plates,
+#menu .menu__content__desserts__plates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu .menu__content__entrees__plates__box,
+#menu .menu__content__main_dishes__plates__box,
+#menu .menu__content__desserts__plates__box {
+  display: block;
+  position: relative;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #menu .menu__content__entrees__plates:nth-child(n+1),
@@ -178,6 +321,17 @@ header img {
   border-bottom-right-radius: 1rem;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation-name: fadeInWhite;
+          animation-name: fadeInWhite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
 }
 
 #menu .menu__content__entrees__plates .menu--flex, #menu .menu__content__main_dishes__plates .menu--flex, #menu .menu__content__desserts__plates .menu--flex {
@@ -192,17 +346,135 @@ header img {
           justify-content: space-between;
 }
 
-#menu .menu--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#menu .menu__content__entrees__plates input, #menu .menu__content__main_dishes__plates input, #menu .menu__content__desserts__plates input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#menu .menu__content__entrees__plates .checkmark, #menu .menu__content__main_dishes__plates .checkmark, #menu .menu__content__desserts__plates .checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  background-color: white;
+}
+
+#menu .menu__content__entrees__plates .checkmark:after, #menu .menu__content__main_dishes__plates .checkmark:after, #menu .menu__content__desserts__plates .checkmark:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f058';
+  font-weight: 900;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  left: -8rem;
+  display: none;
+}
+
+#menu .menu__content__entrees__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu .menu__content__entrees__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu .menu__content__entrees__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu .menu__content__main_dishes__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu .menu__content__desserts__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu .menu__content__desserts__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu .menu__content__desserts__plates .menu__content__desserts__plates:hover input ~ .checkmark {
+  height: 100%;
+  width: 6rem;
+  background-color: #99E2D0;
+}
+
+#menu .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark {
+  height: 100%;
+  width: 6rem;
+  background-color: white;
+}
+
+#menu .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu .menu__content__entrees__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu .menu__content__entrees__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu .menu__content__desserts__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu .menu__content__desserts__plates .menu__content__desserts__plates input:hover ~ .checkmark:after {
+  display: block;
+}
+
+#menu .menu__content__entrees__plates:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+#menu .menu__content__entrees__plates:nth-of-type(2) {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+}
+
+#menu .menu__content__entrees__plates:nth-of-type(3) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+#menu .menu__content__entrees__plates:nth-of-type(4) {
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+}
+
+#menu .menu__content__main_dishes__plates:nth-of-type(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#menu .menu__content__main_dishes__plates:nth-of-type(2) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+#menu .menu__content__main_dishes__plates:nth-of-type(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#menu .menu__content__main_dishes__plates:nth-of-type(4) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+#menu .menu__content__desserts__plates:nth-of-type(1) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#menu .menu__content__desserts__plates:nth-of-type(2) {
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+#menu .menu__content__desserts__plates:nth-of-type(3) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+#menu .menu__content__desserts__plates:nth-of-type(4) {
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
 }
 
 #menu #menu__order--button {
@@ -212,7 +484,7 @@ header img {
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   -webkit-box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
   color: white;

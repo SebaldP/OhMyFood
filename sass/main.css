@@ -68,6 +68,28 @@
   }
 }
 
+@-webkit-keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
+@keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -352,6 +374,10 @@ header img {
 
 #restaurants .restaurants--text h2, #restaurants .restaurants--text p {
   display: block;
+}
+
+#restaurants .restaurants--text p {
+  margin-top: .5rem;
 }
 
 #restaurants__the_full_palette--image {

@@ -68,6 +68,28 @@
   }
 }
 
+@-webkit-keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
+@keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -210,10 +232,30 @@ header img {
 }
 
 #menu__restaurant {
+  position: relative;
+  margin: 1rem 2rem 0 2rem;
+}
+
+#menu__restaurant h1 {
   font-family: "Shrikhand";
   font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-left: .6rem;
+}
+
+#menu__restaurant h1::after {
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  right: 0;
+  content: '\f004';
+  color: #353535;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#menu__restaurant h1::after:hover, #menu__restaurant h1::after:focus {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f004';
+  color: #9356DC;
+  font-weight: 900;
 }
 
 #menu fieldset {
@@ -223,7 +265,7 @@ header img {
 #menu legend {
   font-size: 1.2rem;
   font-weight: lighter;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-left: .6rem;
   -webkit-animation-name: Apparition;
           animation-name: Apparition;

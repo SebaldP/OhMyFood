@@ -68,6 +68,28 @@
   }
 }
 
+@-webkit-keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
+@keyframes Shaking {
+  from {
+    -webkit-transform: translateX(-0.1rem);
+            transform: translateX(-0.1rem);
+  }
+  to {
+    -webkit-transform: translateX(0.1rem);
+            transform: translateX(0.1rem);
+  }
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -250,6 +272,17 @@ section input {
   padding: 1rem;
 }
 
+section input:invalid {
+  border: 0;
+  border-width: 0;
+  background-color: #FF79DA;
+  color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  -webkit-animation: Shaking .2s ease-in-out 5;
+          animation: Shaking .2s ease-in-out 5;
+}
+
 section .login--button {
   display: inline-block;
   color: white;
@@ -265,6 +298,13 @@ section .login--button {
   color: white;
   border: 0;
   margin-top: 1.2rem;
+}
+
+section .extra {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #FF79DA;
 }
 
 footer {

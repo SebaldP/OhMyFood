@@ -238,32 +238,34 @@ header img {
 
 #menu__restaurant h1 {
   font-family: "Shrikhand";
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 #menu__restaurant h1::after {
   font-family: 'Font Awesome 5 Free';
+  content: '\f004';
   position: absolute;
   right: 0;
-  content: '\f004';
+  z-index: 2;
   color: #353535;
   font-size: 2rem;
   font-weight: 400;
 }
 
-#menu__restaurant h1::after:hover, #menu__restaurant h1::after:focus {
-  font-family: 'Font Awesome 5 Free';
-  content: '\f004';
-  color: #9356DC;
+#menu__restaurant h1::after:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  font-size: 2rem;
   font-weight: 900;
+  z-index: 2;
 }
 
-#menu fieldset {
+#menu__content fieldset {
   border: 0;
 }
 
-#menu legend {
-  font-size: 1.2rem;
+#menu__content legend {
+  font-size: 1.6rem;
   font-weight: lighter;
   margin-top: 3rem;
   margin-left: .6rem;
@@ -277,22 +279,22 @@ header img {
           animation-fill-mode: both;
 }
 
-#menu legend:nth-of-type(1) {
+#menu__content legend:nth-of-type(1) {
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
 }
 
-#menu legend:nth-of-type(2) {
+#menu__content legend:nth-of-type(2) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-#menu legend:nth-of-type(3) {
+#menu__content legend:nth-of-type(3) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-#menu legend::after {
+#menu__content legend::after {
   content: '';
   display: block;
   background-color: #99E2D0;
@@ -309,58 +311,43 @@ header img {
           animation-fill-mode: both;
 }
 
-#menu legend::after:nth-of-type(1) {
+#menu__content legend::after:nth-of-type(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-#menu legend::after:nth-of-type(2) {
+#menu__content legend::after:nth-of-type(2) {
   -webkit-animation-delay: .75s;
           animation-delay: .75s;
 }
 
-#menu legend::after:nth-of-type(3) {
+#menu__content legend::after:nth-of-type(3) {
   -webkit-animation-delay: 1.75s;
           animation-delay: 1.75s;
 }
 
-#menu h2 {
+#menu__content h2 {
   font-size: 1.6rem;
 }
 
-#menu .menu__content__entrees__plates,
-#menu .menu__content__main_dishes__plates,
-#menu .menu__content__desserts__plates {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#menu .menu__content__entrees__plates__box,
-#menu .menu__content__main_dishes__plates__box,
-#menu .menu__content__desserts__plates__box {
-  display: block;
-  position: relative;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#menu .menu__content__entrees__plates:nth-child(n+1),
-#menu .menu__content__main_dishes__plates:nth-child(n+1),
-#menu .menu__content__desserts__plates:nth-child(n+1) {
+#menu__content .menu__content__entrees__plates:nth-child(n+1),
+#menu__content .menu__content__main_dishes__plates:nth-child(n+1),
+#menu__content .menu__content__desserts__plates:nth-child(n+1) {
   margin-top: 1rem;
 }
 
-#menu .menu__content__entrees__plates, #menu .menu__content__main_dishes__plates, #menu .menu__content__desserts__plates {
-  padding: 1rem;
-  background-color: white;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+#menu__content .menu__content__entrees__plates, #menu__content .menu__content__main_dishes__plates, #menu__content .menu__content__desserts__plates {
+  display: flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  border-bottom-left-radius: 1.4rem;
+  border-bottom-right-radius: 1.4rem;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   -webkit-animation-name: fadeInWhite;
@@ -376,7 +363,28 @@ header img {
   /* Show the checkmark when checked */
 }
 
-#menu .menu__content__entrees__plates .menu--flex, #menu .menu__content__main_dishes__plates .menu--flex, #menu .menu__content__desserts__plates .menu--flex {
+#menu__content .menu__content__entrees__plates .menu__content__entrees__plates__box,
+#menu__content .menu__content__entrees__plates .menu__content__main_dishes__plates__box,
+#menu__content .menu__content__entrees__plates .menu__content__desserts__plates__box, #menu__content .menu__content__main_dishes__plates .menu__content__entrees__plates__box,
+#menu__content .menu__content__main_dishes__plates .menu__content__main_dishes__plates__box,
+#menu__content .menu__content__main_dishes__plates .menu__content__desserts__plates__box, #menu__content .menu__content__desserts__plates .menu__content__entrees__plates__box,
+#menu__content .menu__content__desserts__plates .menu__content__main_dishes__plates__box,
+#menu__content .menu__content__desserts__plates .menu__content__desserts__plates__box {
+  display: block;
+  padding: 1rem 2rem 1rem 1rem;
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  border-bottom-left-radius: 1.4rem;
+  border-bottom-right-radius: 1.4rem;
+  background-color: white;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#menu__content .menu__content__entrees__plates .menu--flex, #menu__content .menu__content__main_dishes__plates .menu--flex, #menu__content .menu__content__desserts__plates .menu--flex {
   margin-top: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,7 +396,7 @@ header img {
           justify-content: space-between;
 }
 
-#menu .menu__content__entrees__plates input, #menu .menu__content__main_dishes__plates input, #menu .menu__content__desserts__plates input {
+#menu__content .menu__content__entrees__plates input, #menu__content .menu__content__main_dishes__plates input, #menu__content .menu__content__desserts__plates input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -396,7 +404,7 @@ header img {
   width: 0;
 }
 
-#menu .menu__content__entrees__plates .checkmark, #menu .menu__content__main_dishes__plates .checkmark, #menu .menu__content__desserts__plates .checkmark {
+#menu__content .menu__content__entrees__plates .checkmark, #menu__content .menu__content__main_dishes__plates .checkmark, #menu__content .menu__content__desserts__plates .checkmark {
   position: absolute;
   top: 0;
   right: 0;
@@ -405,7 +413,7 @@ header img {
   background-color: white;
 }
 
-#menu .menu__content__entrees__plates .checkmark:after, #menu .menu__content__main_dishes__plates .checkmark:after, #menu .menu__content__desserts__plates .checkmark:after {
+#menu__content .menu__content__entrees__plates .checkmark:after, #menu__content .menu__content__main_dishes__plates .checkmark:after, #menu__content .menu__content__desserts__plates .checkmark:after {
   font-family: 'Font Awesome 5 Free';
   content: '\f058';
   font-weight: 900;
@@ -416,105 +424,105 @@ header img {
   display: none;
 }
 
-#menu .menu__content__entrees__plates .menu__content__entrees__plates:hover input ~ .checkmark,
-#menu .menu__content__entrees__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
-#menu .menu__content__entrees__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates:hover input ~ .checkmark,
-#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
-#menu .menu__content__main_dishes__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu .menu__content__desserts__plates .menu__content__entrees__plates:hover input ~ .checkmark,
-#menu .menu__content__desserts__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
-#menu .menu__content__desserts__plates .menu__content__desserts__plates:hover input ~ .checkmark {
+#menu__content .menu__content__entrees__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu__content .menu__content__entrees__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu__content .menu__content__entrees__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu__content .menu__content__main_dishes__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu__content .menu__content__main_dishes__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu__content .menu__content__main_dishes__plates .menu__content__desserts__plates:hover input ~ .checkmark, #menu__content .menu__content__desserts__plates .menu__content__entrees__plates:hover input ~ .checkmark,
+#menu__content .menu__content__desserts__plates .menu__content__main_dishes__plates:hover input ~ .checkmark,
+#menu__content .menu__content__desserts__plates .menu__content__desserts__plates:hover input ~ .checkmark {
   height: 100%;
   width: 6rem;
   background-color: #99E2D0;
 }
 
-#menu .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark,
-#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
-#menu .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark,
-#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
-#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark,
-#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
-#menu .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark {
+#menu__content .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu__content .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu__content .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu__content .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu__content .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu__content .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark, #menu__content .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark,
+#menu__content .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark,
+#menu__content .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark {
   height: 100%;
   width: 6rem;
   background-color: white;
 }
 
-#menu .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
-#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
-#menu .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
-#menu .menu__content__entrees__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
-#menu .menu__content__entrees__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
-#menu .menu__content__entrees__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
-#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
-#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
-#menu .menu__content__main_dishes__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
-#menu .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
-#menu .menu__content__main_dishes__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
-#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
-#menu .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
-#menu .menu__content__desserts__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
-#menu .menu__content__desserts__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
-#menu .menu__content__desserts__plates .menu__content__desserts__plates input:hover ~ .checkmark:after {
+#menu__content .menu__content__entrees__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__entrees__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__entrees__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__entrees__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__entrees__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__entrees__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu__content .menu__content__main_dishes__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__main_dishes__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__main_dishes__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__main_dishes__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__main_dishes__plates .menu__content__desserts__plates input:hover ~ .checkmark:after, #menu__content .menu__content__desserts__plates .menu__content__entrees__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__desserts__plates .menu__content__main_dishes__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__desserts__plates .menu__content__desserts__plates input:checked ~ .checkmark:after,
+#menu__content .menu__content__desserts__plates .menu__content__entrees__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__desserts__plates .menu__content__main_dishes__plates input:hover ~ .checkmark:after,
+#menu__content .menu__content__desserts__plates .menu__content__desserts__plates input:hover ~ .checkmark:after {
   display: block;
 }
 
-#menu .menu__content__entrees__plates:nth-of-type(1) {
+#menu__content .menu__content__entrees__plates:nth-of-type(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-#menu .menu__content__entrees__plates:nth-of-type(2) {
+#menu__content .menu__content__entrees__plates:nth-of-type(2) {
   -webkit-animation-delay: .25s;
           animation-delay: .25s;
 }
 
-#menu .menu__content__entrees__plates:nth-of-type(3) {
+#menu__content .menu__content__entrees__plates:nth-of-type(3) {
   -webkit-animation-delay: .5s;
           animation-delay: .5s;
 }
 
-#menu .menu__content__entrees__plates:nth-of-type(4) {
+#menu__content .menu__content__entrees__plates:nth-of-type(4) {
   -webkit-animation-delay: .75s;
           animation-delay: .75s;
 }
 
-#menu .menu__content__main_dishes__plates:nth-of-type(1) {
+#menu__content .menu__content__main_dishes__plates:nth-of-type(1) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-#menu .menu__content__main_dishes__plates:nth-of-type(2) {
+#menu__content .menu__content__main_dishes__plates:nth-of-type(2) {
   -webkit-animation-delay: 1.25s;
           animation-delay: 1.25s;
 }
 
-#menu .menu__content__main_dishes__plates:nth-of-type(3) {
+#menu__content .menu__content__main_dishes__plates:nth-of-type(3) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
 
-#menu .menu__content__main_dishes__plates:nth-of-type(4) {
+#menu__content .menu__content__main_dishes__plates:nth-of-type(4) {
   -webkit-animation-delay: 1.75s;
           animation-delay: 1.75s;
 }
 
-#menu .menu__content__desserts__plates:nth-of-type(1) {
+#menu__content .menu__content__desserts__plates:nth-of-type(1) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-#menu .menu__content__desserts__plates:nth-of-type(2) {
+#menu__content .menu__content__desserts__plates:nth-of-type(2) {
   -webkit-animation-delay: 2.25s;
           animation-delay: 2.25s;
 }
 
-#menu .menu__content__desserts__plates:nth-of-type(3) {
+#menu__content .menu__content__desserts__plates:nth-of-type(3) {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
-#menu .menu__content__desserts__plates:nth-of-type(4) {
+#menu__content .menu__content__desserts__plates:nth-of-type(4) {
   -webkit-animation-delay: 2.75s;
           animation-delay: 2.75s;
 }
@@ -534,7 +542,7 @@ header img {
 
 footer {
   background-color: #353535;
-  padding: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
 }
 
 footer svg {

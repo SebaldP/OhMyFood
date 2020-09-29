@@ -142,13 +142,13 @@ a:hover, a:focus, a:visited {
 @font-face {
   font-family: "Roboto";
   font-weight: bold;
-  src: url("../font/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../font/Roboto/Roboto-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: bolder;
-  src: url("../font/Roboto/Roboto-Black.ttf") format("truetype");
+  src: url("../font/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 @font-face {
@@ -159,7 +159,7 @@ a:hover, a:focus, a:visited {
 
 @font-face {
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: bolder;
   font-style: italic;
   src: url("../font/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
@@ -248,6 +248,7 @@ header img {
 #exploration__tool--button {
   display: inline-block;
   margin-bottom: 2rem;
+  font-weight: bold;
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -325,7 +326,7 @@ header img {
 }
 
 #restaurants {
-  padding: 2rem;
+  padding: 6rem 2rem 6rem 2rem;
   background-color: #F6F6F6;
   /* .restaurants--text::after{
         font-family: 'Font Awesome 5 Free';
@@ -374,6 +375,7 @@ header img {
 
 #restaurants .restaurants--text h2, #restaurants .restaurants--text p {
   display: block;
+  font-size: 1.6rem;
 }
 
 #restaurants .restaurants--text p {
@@ -446,7 +448,7 @@ header img {
 
 footer {
   background-color: #353535;
-  padding: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
 }
 
 footer svg {

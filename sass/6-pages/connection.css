@@ -175,6 +175,12 @@ a:hover, a:focus, a:visited {
   text-decoration: none;
 }
 
+body {
+  background: url(../../images/restaurant-backgroung.jpg) no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -208,7 +214,7 @@ header img {
 }
 
 section {
-  margin: 9rem 2rem 4.5rem 2rem;
+  padding: 10rem 2rem 10rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,13 +230,23 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+section form {
+  text-align: center;
+}
+
+section legend {
+  font-weight: bold;
+  margin: 0 auto 2rem auto;
 }
 
 section p {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 section h2 {
@@ -242,6 +258,7 @@ section h2 {
 section .connection--button {
   display: block;
   text-align: center;
+  cursor: pointer;
   margin: 3rem 6rem 0 6rem;
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -258,58 +275,83 @@ section fieldset {
 
 section label {
   display: block;
-  margin-top: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-section input {
+section input:not(.login--button), section input:not(.login--button):not(:placeholder-shown) {
   font-size: 1.6rem;
-  border: 0.4rem #FF79DA solid;
-  border-radius: 2rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0.1rem #353535 solid;
   padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input:invalid {
+section input:not(.login--button):focus:valid {
+  font-size: 1.6rem;
+  outline: none;
   border: 0;
-  border-width: 0;
-  background-color: #FF79DA;
-  color: white;
-  border-radius: 2rem;
+  border-bottom: 0.4rem #99E2D0 solid;
   padding: 1rem;
-  -webkit-animation: Shaking .2s ease-in-out 5;
-          animation: Shaking .2s ease-in-out 5;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section input:not(.login--button):valid {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0;
+  padding: 1rem;
+  background-color: rgba(153, 226, 208, 0.5);
+}
+
+section input:not(.login--button):focus:invalid {
+  border: 0;
+  border-bottom: 0.4rem #FF79DA solid;
+  outline: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section input:required, section input:required:invalid {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 section .login--button {
-  display: inline-block;
   color: white;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
+  border: 0;
+  display: block;
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
   -webkit-box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
   color: white;
-  border: 0;
-  margin-top: 1.2rem;
+  cursor: pointer;
+  margin: 1.6rem auto 0 auto;
 }
 
-section .extra {
+section .extra:hover {
   font-style: italic;
   font-weight: bold;
   text-decoration: underline;
-  color: #FF79DA;
+  cursor: pointer;
+  color: #9356DC;
 }
 
 footer {
   background-color: #353535;
-  padding: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
 }
 
 footer svg {

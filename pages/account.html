@@ -25,22 +25,20 @@
                 <fieldset>
                 <legend>Create your account:</legend>
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" id="fname" name="fname" autocomplete="off" placeholder="First name" required><br><br>
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="text" id="lname" name="lname" autocomplete="off" placeholder="Last name" required><br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" autocomplete="off" placeholder="E-mail" required><br><br>
                 <label for="lname">Username (5 characters minimum):</label>
-                <input type="text" id="uname" name="uname" minlength="5" required><br><br>
+                <input type="text" id="uname" name="uname" minlength="5" autocomplete="off" placeholder="Username" required><br><br>
                 <label for="password">Password (8 characters minimum):</label>
-                <input type="password" name="password" id="password" minlength="8" required><br><br>
+                <input type="password" name="password" id="password" minlength="8" autocomplete="off" placeholder="Password" required><br><br>
                 <input type="submit" value="Submit" class="login--button">
                 </fieldset>
             </form>
             <p>Or</p>
-            <a href="./connection.html" class="connection--button"><h2>Use your existing account</h2></a>
+            <a href="./connection.html" class="connection--button"><h2>You already have one?</h2></a>
         </section>
         <footer>
             <svg viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8" />
         <title>Oh My Food! - Home</title>
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo/title_logo@600x.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="./images/logo/title_logo@600x.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/font_awesome_5_free.css">
+        <link rel="stylesheet" href="./css/font_awesome_5_free.css">
         <link rel="stylesheet" type="text/css" href="sass/main.css" />
         <meta property="og:title" content="Oh My Food!" />
         <meta property="og:type" content="Curriculum Vitae" />
@@ -16,6 +16,7 @@
         <meta property="og:site_name" content="Oh My Food!" />
     </head>
     <body>
+        <div id="spinner"><img src="./images/spinner.gif" class="spinner__element" alt="spinner"/><img src="./images/logo/ohmyfood@2x.svg" class="spinner__logo" alt="logo"/></div>
         <header>
             <img src="images/logo/ohmyfood@2x.svg" />
         </header>
@@ -40,19 +41,83 @@
             <h1 id="restaurants__title">Restaurants</h1>
             <div id="restaurants__the_full_palette" class="restaurants__windows">
                 <div id="restaurants__the_full_palette--image"><h3 class="restaurants__windows--new">New</h3></div>
-                <div class="restaurants--text"><a href="./pages/the_full_palette.html"><h2>The Full Palette</h2><p>New York</p></a></div>
+                <div class="restaurants--text">
+                    <a href="./pages/the_full_palette.html"><h2>The Full Palette</h2><p>New York</p></a>
+                    <svg version="1.1" class="heart" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="MyGradient" gradientTransform="rotate(90)">
+                            <stop offset="0%" stop-color="#9356dc" />
+                            <stop offset="100%" stop-color="#ff79da" />
+                            </linearGradient>
+                        </defs>
+                        <path class="heart--body" d="M512,174.4c-2.9-36.5-19.3-73-53.1-101.4c-45.2-38-109.7-41.8-162.1-14.8c-7.5,5.3-14.5,11.3-21.1,18L256,96.5l-19.7-20.3
+                            c-7.2-7.5-15.1-14-23.5-19.7C161,31.3,98.3,35.7,54,73C17.5,103.7,1.4,143.8,0.5,183.2c-0.9,41.8,15.4,82.8,43,110.9l175.4,178.7
+                            c10,10.2,23.4,15.9,37.6,15.9c14.3,0,27.6-5.6,37.6-15.8l175.4-178.7C498.9,264.1,515.6,219.2,512,174.4z"/>
+                        <path class="heart--center" d="M253,439.2c2.4,2.4,4.4,2.4,6.8,0l175.4-178.7c36.2-36.9,43.8-107.7-7.3-150.8c-38.7-32.6-98.7-27.9-136.5,10.6
+                            l-35,35.7l-35-35.7C183.8,82,123.8,77,85,109.8c-51.2,43.1-43.8,113.5-7.3,150.7L253,439.2z"/>
+                    </svg>
+                </div>
             </div>
             <div id="restaurants__the_enchanted_plate" class="restaurants__windows">
                 <div id="restaurants__the_enchanted_plate--image"><h3 class="restaurants__windows--new">New</h3></div>
-                <div class="restaurants--text"><a href="./pages/the_enchanted_plate.html"><h2>The Enchanted Plate</h2><p>New York</p></a></div>
+                <div class="restaurants--text">
+                    <a href="./pages/the_enchanted_plate.html"><h2>The Enchanted Plate</h2><p>New York</p></a>
+                    <svg version="1.1" class="heart" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="MyGradient" gradientTransform="rotate(90)">
+                            <stop offset="0%" stop-color="#9356dc" />
+                            <stop offset="100%" stop-color="#ff79da" />
+                            </linearGradient>
+                        </defs>
+                        <path class="heart--body" d="M512,174.4c-2.9-36.5-19.3-73-53.1-101.4c-45.2-38-109.7-41.8-162.1-14.8c-7.5,5.3-14.5,11.3-21.1,18L256,96.5l-19.7-20.3
+                            c-7.2-7.5-15.1-14-23.5-19.7C161,31.3,98.3,35.7,54,73C17.5,103.7,1.4,143.8,0.5,183.2c-0.9,41.8,15.4,82.8,43,110.9l175.4,178.7
+                            c10,10.2,23.4,15.9,37.6,15.9c14.3,0,27.6-5.6,37.6-15.8l175.4-178.7C498.9,264.1,515.6,219.2,512,174.4z"/>
+                        <path class="heart--center" d="M253,439.2c2.4,2.4,4.4,2.4,6.8,0l175.4-178.7c36.2-36.9,43.8-107.7-7.3-150.8c-38.7-32.6-98.7-27.9-136.5,10.6
+                            l-35,35.7l-35-35.7C183.8,82,123.8,77,85,109.8c-51.2,43.1-43.8,113.5-7.3,150.7L253,439.2z"/>
+                    </svg>
+                </div>
             </div>
             <div id="restaurants__bastille" class="restaurants__windows">
                 <div id="restaurants__bastille--image"></div>
-                <div class="restaurants--text"><a href="./pages/bastille.html"><h2>Bastille</h2><p>New York</p></a></div>
+                <div class="restaurants--text">
+                    <a href="./pages/bastille.html"><h2>Bastille</h2><p>New York</p></a>
+                    <svg version="1.1" class="heart" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="MyGradient" gradientTransform="rotate(90)">
+                            <stop offset="0%" stop-color="#9356dc" />
+                            <stop offset="100%" stop-color="#ff79da" />
+                            </linearGradient>
+                        </defs>
+                        <path class="heart--body" d="M512,174.4c-2.9-36.5-19.3-73-53.1-101.4c-45.2-38-109.7-41.8-162.1-14.8c-7.5,5.3-14.5,11.3-21.1,18L256,96.5l-19.7-20.3
+                            c-7.2-7.5-15.1-14-23.5-19.7C161,31.3,98.3,35.7,54,73C17.5,103.7,1.4,143.8,0.5,183.2c-0.9,41.8,15.4,82.8,43,110.9l175.4,178.7
+                            c10,10.2,23.4,15.9,37.6,15.9c14.3,0,27.6-5.6,37.6-15.8l175.4-178.7C498.9,264.1,515.6,219.2,512,174.4z"/>
+                        <path class="heart--center" d="M253,439.2c2.4,2.4,4.4,2.4,6.8,0l175.4-178.7c36.2-36.9,43.8-107.7-7.3-150.8c-38.7-32.6-98.7-27.9-136.5,10.6
+                            l-35,35.7l-35-35.7C183.8,82,123.8,77,85,109.8c-51.2,43.1-43.8,113.5-7.3,150.7L253,439.2z"/>
+                    </svg>
+                </div>
             </div>
             <div id="restaurants__le_gourmand" class="restaurants__windows">
                 <div id="restaurants__le_gourmand--image"></div>
-                <div class="restaurants--text"><a href="./pages/le_gourmand.html"><h2>Le Gourmand</h2><p>New York</p></a></div>
+                <div class="restaurants--text">
+                    <a href="./pages/le_gourmand.html"><h2>Le Gourmand</h2><p>New York</p></a>
+                    <svg version="1.1" class="heart" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="MyGradient" gradientTransform="rotate(90)">
+                            <stop offset="0%" stop-color="#9356dc" />
+                            <stop offset="100%" stop-color="#ff79da" />
+                            </linearGradient>
+                        </defs>
+                        <path class="heart--body" d="M512,174.4c-2.9-36.5-19.3-73-53.1-101.4c-45.2-38-109.7-41.8-162.1-14.8c-7.5,5.3-14.5,11.3-21.1,18L256,96.5l-19.7-20.3
+                            c-7.2-7.5-15.1-14-23.5-19.7C161,31.3,98.3,35.7,54,73C17.5,103.7,1.4,143.8,0.5,183.2c-0.9,41.8,15.4,82.8,43,110.9l175.4,178.7
+                            c10,10.2,23.4,15.9,37.6,15.9c14.3,0,27.6-5.6,37.6-15.8l175.4-178.7C498.9,264.1,515.6,219.2,512,174.4z"/>
+                        <path class="heart--center" d="M253,439.2c2.4,2.4,4.4,2.4,6.8,0l175.4-178.7c36.2-36.9,43.8-107.7-7.3-150.8c-38.7-32.6-98.7-27.9-136.5,10.6
+                            l-35,35.7l-35-35.7C183.8,82,123.8,77,85,109.8c-51.2,43.1-43.8,113.5-7.3,150.7L253,439.2z"/>
+                    </svg>
+                </div>
             </div>
 
         </section>
@@ -70,7 +135,7 @@
             <a href="./pages/account.html"><p class="footer__suggestion">Suggest a restaurant</p></a>
             <a href="./pages/account.html"><p class="footer__partner">Become a partner</p></a>
             <a href="#"><p class="footer__legal">Legal</p></a>
-            <a href="#"><p class="footer__contact">Contact</p></a>
+            <a href="mailto:contact@ohmyfood"><p class="footer__contact">Contact</p></a>
         </footer>
     </body>
 </html>

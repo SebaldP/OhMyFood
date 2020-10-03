@@ -24,7 +24,23 @@
             <img src="../images/restaurants/bastille.jpg" alt="Photographie des plats proposés par le restautant Bastille.">
         </div>
         <section id="menu">
-            <div id="menu__restaurant"><h1>Bastille</h1></div>
+            <div id="menu__restaurant">
+                <h1>Bastille</h1>
+                <svg version="1.1" class="heart" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <defs>
+                        <linearGradient id="MyGradient" gradientTransform="rotate(90)">
+                          <stop offset="0%" stop-color="#9356dc" />
+                          <stop offset="100%" stop-color="#ff79da" />
+                        </linearGradient>
+                    </defs>
+                    <path class="heart--body" d="M512,174.4c-2.9-36.5-19.3-73-53.1-101.4c-45.2-38-109.7-41.8-162.1-14.8c-7.5,5.3-14.5,11.3-21.1,18L256,96.5l-19.7-20.3
+                        c-7.2-7.5-15.1-14-23.5-19.7C161,31.3,98.3,35.7,54,73C17.5,103.7,1.4,143.8,0.5,183.2c-0.9,41.8,15.4,82.8,43,110.9l175.4,178.7
+                        c10,10.2,23.4,15.9,37.6,15.9c14.3,0,27.6-5.6,37.6-15.8l175.4-178.7C498.9,264.1,515.6,219.2,512,174.4z"/>
+                    <path class="heart--center" d="M253,439.2c2.4,2.4,4.4,2.4,6.8,0l175.4-178.7c36.2-36.9,43.8-107.7-7.3-150.8c-38.7-32.6-98.7-27.9-136.5,10.6
+                        l-35,35.7l-35-35.7C183.8,82,123.8,77,85,109.8c-51.2,43.1-43.8,113.5-7.3,150.7L253,439.2z"/>
+                </svg>
+            </div>
             <form id="menu__content" action="../order_bastille.php">
                 <fieldset>
                     <legend id="menu__content__entrees">ENTREES</legend>
@@ -33,27 +49,27 @@
                             <div class="menu--flex"><p class="menu__content__entrees__plates__description">With orange zest</p>
                                 <h4 class="menu__content__entrees__plates__price">25€</h4>
                             </div>
-                            <input type="checkbox" id="entrees1" name="entree" value="Citrus Squid Carpaccio">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="entrees1" name="entree1" value="Citrus Squid Carpaccio">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__entrees__plates">
                         <label class="menu__content__entrees__plates__box" for="entrees2"><h2 class="menu__content__entrees__plates__name">Grandmother's Vegetable Soup</h2>
                             <div class="menu--flex"><p class="menu__content__entrees__plates__description">Carrots, parsnips, Jerusalem artichoke</p>
                                 <h4 class="menu__content__entrees__plates__price">35€</h4>
                             </div>
-                            <input type="checkbox" id="entrees2" name="entree" value="Grandmother's Vegetable Soup">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="entrees2" name="entree2" value="Grandmother's Vegetable Soup">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__entrees__plates">
                         <label class="menu__content__entrees__plates__box" for="entrees3"><h2 class="menu__content__entrees__plates__name">Onion Soup</h2>
                             <div class="menu--flex"><p class="menu__content__entrees__plates__description">Revisited</p>
                                 <h4 class="menu__content__entrees__plates__price">20€</h4>
                             </div>
-                            <input type="checkbox" id="entrees3" name="entree" value="Onion Soup">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="entrees3" name="entree3" value="Onion Soup">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -63,27 +79,27 @@
                             <div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With mashed parsnip</p>
                                 <h4 class="menu__content__main_dishes__plates__price">40€</h4>
                             </div>
-                        <input type="checkbox" id="maindish1" name="main_dish" value="Scallops">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="maindish1" name="main_dish1" value="Scallops">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__main_dishes__plates">
                         <label class="menu__content__entrees__plates__box" for="maindish2"><h2 class="menu__content__main_dishes__plates__name">Magret de canard</h2>
                             <div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With mashed potatoes</p>
                                 <h4 class="menu__content__main_dishes__plates__price">35€</h4>
                             </div>
-                        <input type="checkbox" id="maindish2" name="main_dish" value="Magret de canard">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="maindish2" name="main_dish2" value="Magret de canard">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__main_dishes__plates">
                         <label class="menu__content__entrees__plates__box" for="maindish3"><h2 class="menu__content__main_dishes__plates__name">Game Hen</h2>
                             <div class="menu--flex"><p class="menu__content__main_dishes__plates__description">With vegetale gnocchis</p>
                                 <h4 class="menu__content__main_dishes__plates__price">44€</h4>
                             </div>
-                        <input type="checkbox" id="maindish3" name="main_dish" value="Game Hen">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="maindish3" name="main_dish3" value="Game Hen">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -93,27 +109,29 @@
                             <div class="menu--flex"><p class="menu__content__desserts__plates__description">With hazelnut butter</p>
                                 <h4 class="menu__content__desserts__plates__price">18€</h4>
                             </div>
-                        <input type="checkbox" id="dessert1" name="dessert" value="Floral Ice Cream">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="dessert1" name="dessert1" value="Floral Ice Cream">
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__desserts__plates">
                         <label class="menu__content__entrees__plates__box" for="dessert2"><h2 class="menu__content__desserts__plates__name">Chocolate Lava Cake</h2>
                             <div class="menu--flex"><p class="menu__content__desserts__plates__description">Revisited</p>
                                 <h4 class="menu__content__desserts__plates__price">22€</h4>
                             </div>
-                        <input type="checkbox" id="dessert2" name="dessert" value="Chocolate Lava Cake">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="dessert2" name="dessert2" value="Chocolate Lava Cake">
+                        </label>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                     <div class="menu__content__desserts__plates">
                         <label class="menu__content__entrees__plates__box" for="dessert3"><h2 class="menu__content__desserts__plates__name">Napolean</h2>
                             <div class="menu--flex"><p class="menu__content__desserts__plates__description">with blueberries and marzipan</p>
                                 <h4 class="menu__content__desserts__plates__price">23€</h4>
                             </div>
-                        <input type="checkbox" id="dessert3" name="dessert" value="Napolean">
                         </label>
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="dessert3" name="dessert3" value="Napolean">
+                        </label>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
                     </div>
                 </fieldset>    
             </form>
@@ -133,7 +151,7 @@
             <a href="./account.html"><p class="footer__suggestion">Suggest a restaurant</p></a>
             <a href="./account.html"><p class="footer__partner">Become a partner</p></a>
             <a href="#"><p class="footer__legal">Legal</p></a>
-            <a href="#"><p class="footer__contact">Contact</p></a>
+            <a href="mailto:contact@ohmyfood"><p class="footer__contact">Contact</p></a>
         </footer>
     </body>
 </html>

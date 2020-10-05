@@ -301,7 +301,6 @@ body {
   background: url(../../images/restaurant-backgroung.jpg) no-repeat top center;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
 }
 
 header {
@@ -337,8 +336,7 @@ header img {
 }
 
 section {
-  padding: 1rem 2rem 1rem 2rem;
-  height: 80vh;
+  padding: 9.5rem 2rem 5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,11 +532,4 @@ footer .footer__partner::before {
   color: white;
   margin-right: 1em;
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-/*# sourceMappingURL=connection.css.map */
+/*# sourceMappingURL=account.css.map */

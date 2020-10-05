@@ -176,6 +176,42 @@
   }
 }
 
+@-webkit-keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -324,7 +360,7 @@ header img {
 
 #menu__restaurant h1 {
   font-family: "Shrikhand";
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 
 #menu__restaurant .heart {
@@ -333,6 +369,7 @@ header img {
   right: 0;
   height: 2rem;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 #menu__restaurant .heart--body {
@@ -464,25 +501,19 @@ header img {
 #menu__content .menu__content__entrees__plates__box, #menu__content .menu__content__main_dishes__plates__box, #menu__content .menu__content__desserts__plates__box {
   display: block;
   width: 100%;
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   border-top-left-radius: 1.4rem;
   border-bottom-left-radius: 1.4rem;
   background-color: white;
   cursor: pointer;
+  margin-right: -3rem;
   transition: margin-right 2s ease;
   -webkit-transition: margin-right 2s ease;
   transition-delay: .5s;
   -webkit-transition-delay: .5s;
 }
 
-#menu__content .menu__content__entrees__plates [type="checkbox"]:not(:checked),
-#menu__content .menu__content__entrees__plates [type="checkbox"]:checked, #menu__content .menu__content__main_dishes__plates [type="checkbox"]:not(:checked),
-#menu__content .menu__content__main_dishes__plates [type="checkbox"]:checked, #menu__content .menu__content__desserts__plates [type="checkbox"]:not(:checked),
-#menu__content .menu__content__desserts__plates [type="checkbox"]:checked {
-  opacity: 0;
-}
-
-#menu__content .menu__content__entrees__plates .menu--flex, #menu__content .menu__content__main_dishes__plates .menu--flex, #menu__content .menu__content__desserts__plates .menu--flex {
+#menu__content .menu__content__entrees__plates__box .menu--flex, #menu__content .menu__content__main_dishes__plates__box .menu--flex, #menu__content .menu__content__desserts__plates__box .menu--flex {
   margin-top: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,6 +523,19 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#menu__content .menu__content__entrees__plates__box .menu--flex p, #menu__content .menu__content__main_dishes__plates__box .menu--flex p, #menu__content .menu__content__desserts__plates__box .menu--flex p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#menu__content .menu__content__entrees__plates [type="checkbox"]:not(:checked),
+#menu__content .menu__content__entrees__plates [type="checkbox"]:checked, #menu__content .menu__content__main_dishes__plates [type="checkbox"]:not(:checked),
+#menu__content .menu__content__main_dishes__plates [type="checkbox"]:checked, #menu__content .menu__content__desserts__plates [type="checkbox"]:not(:checked),
+#menu__content .menu__content__desserts__plates [type="checkbox"]:checked {
+  opacity: 0;
 }
 
 #menu__content .menu__content__entrees__plates .checkmark, #menu__content .menu__content__main_dishes__plates .checkmark, #menu__content .menu__content__desserts__plates .checkmark {
@@ -506,7 +550,7 @@ header img {
           align-items: center;
   position: absolute;
   top: 0;
-  right: -6rem;
+  right: -3rem;
   bottom: 0;
   width: 3rem;
   background-color: #99E2D0;
@@ -525,7 +569,7 @@ header img {
 }
 
 #menu__content .menu__content__entrees__plates__box:hover, #menu__content .menu__content__main_dishes__plates__box:hover, #menu__content .menu__content__desserts__plates__box:hover {
-  margin-right: 6rem;
+  margin-right: 3rem;
 }
 
 #menu__content .menu__content__entrees__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__main_dishes__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__desserts__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark {

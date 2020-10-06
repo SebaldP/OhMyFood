@@ -234,6 +234,70 @@ dfn {
   font-style: italic;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -419,7 +483,11 @@ section label {
   text-transform: uppercase;
 }
 
-section input:not(.login--button), section input:not(.login--button):not(:placeholder-shown) {
+section input[type=text]::-ms-clear {
+  display: none;
+}
+
+section input[type=text], section input[type=text]:not(:placeholder-shown) {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -428,7 +496,25 @@ section input:not(.login--button), section input:not(.login--button):not(:placeh
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input:not(.login--button):focus:valid {
+section ::-webkit-input[type=text], section ::-webkit-input[type=text]:not(:placeholder-shown) {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0.1rem #353535 solid;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section ::-ms-input[type=text], section ::-ms-input[type=text]:not(:placeholder-shown) {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0.1rem #353535 solid;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section input[type=text]:focus:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -437,7 +523,25 @@ section input:not(.login--button):focus:valid {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input:not(.login--button):valid {
+section ::-webkit-input[type=text]:focus:valid {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0.4rem #99E2D0 solid;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section ::-ms-input[type=text]:focus:valid {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0.4rem #99E2D0 solid;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section input[type=text]:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -446,7 +550,25 @@ section input:not(.login--button):valid {
   background-color: rgba(153, 226, 208, 0.5);
 }
 
-section input:not(.login--button):focus:invalid {
+section ::-webkit-input[type=text]:valid {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0;
+  padding: 1rem;
+  background-color: rgba(153, 226, 208, 0.5);
+}
+
+section ::-ms-input[type=text]:valid {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+  border-bottom: 0;
+  padding: 1rem;
+  background-color: rgba(153, 226, 208, 0.5);
+}
+
+section input[type=text]:focus:invalid {
   border: 0;
   border-bottom: 0.4rem #FF79DA solid;
   outline: none;
@@ -454,10 +576,37 @@ section input:not(.login--button):focus:invalid {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input:required, section input:required:invalid {
+section ::-webkit-input[type=text]:focus:invalid {
+  border: 0;
+  border-bottom: 0.4rem #FF79DA solid;
+  outline: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section ::-ms-input[type=text]:focus:invalid {
+  border: 0;
+  border-bottom: 0.4rem #FF79DA solid;
+  outline: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section input[type=text]:required, section input[type=text]:required:invalid {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+section ::-webkit-input[type=text]:required, section input[type=text]:required:invalid {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section ::-ms-input[type=text]:required, section input[type=text]:required:invalid {
+  outline: none;
+  box-shadow: none;
 }
 
 section .login--button {

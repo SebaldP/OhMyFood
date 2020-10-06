@@ -234,6 +234,70 @@ dfn {
   font-style: italic;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -361,6 +425,7 @@ header img {
 #menu__restaurant h1 {
   font-family: "Shrikhand";
   font-size: 2.6rem;
+  margin-right: 1.4rem;
 }
 
 #menu__restaurant .heart {
@@ -369,7 +434,6 @@ header img {
   right: 0;
   height: 2rem;
   cursor: pointer;
-  margin-left: 1rem;
 }
 
 #menu__restaurant .heart--body {
@@ -398,12 +462,12 @@ header img {
 
 #menu__content fieldset {
   border: 0;
+  margin-top: 3rem;
 }
 
 #menu__content legend {
   font-size: 1.6rem;
   font-weight: lighter;
-  margin-top: 3rem;
   margin-left: .6rem;
   animation-name: Apparition;
   -webkit-animation-name: Apparition;
@@ -499,7 +563,6 @@ header img {
 }
 
 #menu__content .menu__content__entrees__plates__box, #menu__content .menu__content__main_dishes__plates__box, #menu__content .menu__content__desserts__plates__box {
-  display: block;
   width: 100%;
   padding: 1rem 3rem 1rem 1rem;
   border-top-left-radius: 1.4rem;
@@ -523,12 +586,23 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 0;
 }
 
-#menu__content .menu__content__entrees__plates__box .menu--flex p, #menu__content .menu__content__main_dishes__plates__box .menu--flex p, #menu__content .menu__content__desserts__plates__box .menu--flex p {
+#menu__content .menu__content__entrees__plates__box .menu--flex .menu__content__desserts__plates__description, #menu__content .menu__content__main_dishes__plates__box .menu--flex .menu__content__desserts__plates__description, #menu__content .menu__content__desserts__plates__box .menu--flex .menu__content__desserts__plates__description {
+  display: block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#menu__content .menu__content__entrees__plates__box .menu--flex .menu__content__entrees__plates__price, #menu__content .menu__content__main_dishes__plates__box .menu--flex .menu__content__entrees__plates__price, #menu__content .menu__content__desserts__plates__box .menu--flex .menu__content__entrees__plates__price {
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 #menu__content .menu__content__entrees__plates [type="checkbox"]:not(:checked),

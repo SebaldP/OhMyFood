@@ -137,8 +137,8 @@
     background-image: linear-gradient(#FF79DA, #9356DC);
     -webkit-box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
             box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
-    transform: scale(100%);
-    -webkit-transform: scale(100%);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
   to {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9BE3), to(#AE80E5));
@@ -424,7 +424,7 @@ header img {
 
 #menu__restaurant h1 {
   font-family: "Shrikhand";
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   margin-right: 1.4rem;
 }
 
@@ -540,6 +540,7 @@ header img {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 100%;
   position: relative;
   border-top-left-radius: 1.4rem;
   border-top-right-radius: 1.4rem;
@@ -589,18 +590,21 @@ header img {
   min-width: 0;
 }
 
-#menu__content .menu__content__entrees__plates__box .menu--flex .menu__content__desserts__plates__description, #menu__content .menu__content__main_dishes__plates__box .menu--flex .menu__content__desserts__plates__description, #menu__content .menu__content__desserts__plates__box .menu--flex .menu__content__desserts__plates__description {
-  display: block;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  white-space: nowrap;
+#menu__content .menu__content__entrees__plates__box .menu--flex span, #menu__content .menu__content__main_dishes__plates__box .menu--flex span, #menu__content .menu__content__desserts__plates__box .menu--flex span {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  padding-right: 1.2rem;
+  width: 29rem;
+  transition: all 2s ease;
+  -webkit-transition: all 2s ease;
+  transition-delay: .5s;
+  -webkit-transition-delay: .5s;
 }
 
-#menu__content .menu__content__entrees__plates__box .menu--flex .menu__content__entrees__plates__price, #menu__content .menu__content__main_dishes__plates__box .menu--flex .menu__content__entrees__plates__price, #menu__content .menu__content__desserts__plates__box .menu--flex .menu__content__entrees__plates__price {
-  display: block;
+#menu__content .menu__content__entrees__plates__box .menu--flex h4, #menu__content .menu__content__main_dishes__plates__box .menu--flex h4, #menu__content .menu__content__desserts__plates__box .menu--flex h4 {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -644,6 +648,10 @@ header img {
 
 #menu__content .menu__content__entrees__plates__box:hover, #menu__content .menu__content__main_dishes__plates__box:hover, #menu__content .menu__content__desserts__plates__box:hover {
   margin-right: 3rem;
+}
+
+#menu__content .menu__content__entrees__plates__box:hover span, #menu__content .menu__content__main_dishes__plates__box:hover span, #menu__content .menu__content__desserts__plates__box:hover span {
+  width: 26rem;
 }
 
 #menu__content .menu__content__entrees__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__main_dishes__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__desserts__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark {

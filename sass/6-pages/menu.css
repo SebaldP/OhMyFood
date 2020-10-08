@@ -597,7 +597,7 @@ header img {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   padding-right: 1.2rem;
-  width: 29rem;
+  width: 65vw;
   transition: all 2s ease;
   -webkit-transition: all 2s ease;
   transition-delay: .5s;
@@ -651,7 +651,7 @@ header img {
 }
 
 #menu__content .menu__content__entrees__plates__box:hover span, #menu__content .menu__content__main_dishes__plates__box:hover span, #menu__content .menu__content__desserts__plates__box:hover span {
-  width: 26rem;
+  width: calc(65vw - 3rem);
 }
 
 #menu__content .menu__content__entrees__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__main_dishes__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark, #menu__content .menu__content__desserts__plates__box:hover ~ input[type="checkbox"]:not(:checked) ~ .checkmark {

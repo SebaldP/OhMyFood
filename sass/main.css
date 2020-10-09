@@ -678,7 +678,7 @@ header img {
 }
 
 #restaurants .restaurants--text .heart:hover .heart--body {
-  fill: url(#MyGradient);
+  fill: url(.MyGradient);
 }
 
 #restaurants .restaurants--text .heart:hover .heart--center {

@@ -321,7 +321,7 @@ html {
 
 @font-face {
   font-family: "Roboto";
-  font-weight: bolder;
+  font-weight: 900;
   src: url("../../font/Roboto/Roboto-Black.ttf") format("truetype");
 }
 
@@ -340,7 +340,7 @@ html {
 
 @font-face {
   font-family: "Roboto";
-  font-weight: lighter;
+  font-weight: 200;
   src: url("../../font/Roboto/Roboto-Light.ttf") format("truetype");
 }
 
@@ -482,7 +482,9 @@ section label {
   text-transform: uppercase;
 }
 
-section input:not(.login--button):empty {
+section input[type=text], section input[type=email], section input[type=password],
+section ::-webkit-input[type=text], section ::-webkit-input[type=email], section ::-webkit-input[type=password],
+section ::-ms-input[type=text], section ::-ms-input[type=email], section ::-ms-input[type=password] {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -491,7 +493,9 @@ section input:not(.login--button):empty {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input:not(.login--button), section input:not(.login--button):not(:placeholder-shown) {
+section input[type=text]:empty, section input[type=email]:empty, section input[type=password]:empty,
+section ::-webkit-input[type=text]:empty, section ::-webkit-input[type=email]:empty, section ::-webkit-input[type=password]:empty,
+section ::-ms-input[type=text]:empty, section ::-ms-input[type=email]:empty, section ::-ms-input[type=password]:empty {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -500,7 +504,9 @@ section input:not(.login--button), section input:not(.login--button):not(:placeh
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section ::-webkit-input:not(.login--button), section ::-webkit-input:not(.login--button):not(:placeholder-shown) {
+section input[type=text]:not(:placeholder-shown), section input[type=email]:not(:placeholder-shown), section input[type=password]:not(:placeholder-shown),
+section ::-webkit-input[type=text]:not(:placeholder-shown), section ::-webkit-input[type=email]:not(:placeholder-shown), section ::-webkit-input[type=password]:not(:placeholder-shown),
+section ::-ms-input[type=text]:not(:placeholder-shown), section ::-ms-input[type=email]:not(:placeholder-shown), section ::-ms-input[type=password]:not(:placeholder-shown) {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -509,16 +515,9 @@ section ::-webkit-input:not(.login--button), section ::-webkit-input:not(.login-
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section ::-ms-input:not(.login--button), section ::-ms-input:not(.login--button):not(:placeholder-shown) {
-  font-size: 1.6rem;
-  outline: none;
-  border: 0;
-  border-bottom: 0.1rem #353535 solid;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-section input:not(.login--button):focus:valid {
+section input[type=text]:focus:valid, section input[type=email]:focus:valid, section input[type=password]:focus:valid,
+section ::-webkit-input[type=text]:focus:valid, section ::-webkit-input[type=email]:focus:valid, section ::-webkit-input[type=password]:focus:valid,
+section ::-ms-input[type=text]:focus:valid, section ::-ms-input[type=email]:focus:valid, section ::-ms-input[type=password]:focus:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -527,25 +526,9 @@ section input:not(.login--button):focus:valid {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section ::-webkit-input:not(.login--button):focus:valid {
-  font-size: 1.6rem;
-  outline: none;
-  border: 0;
-  border-bottom: 0.4rem #99E2D0 solid;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-section ::-ms-input:not(.login--button):focus:valid {
-  font-size: 1.6rem;
-  outline: none;
-  border: 0;
-  border-bottom: 0.4rem #99E2D0 solid;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-section input:not(.login--button):valid {
+section input[type=text]:valid, section input[type=email]:valid, section input[type=password]:valid,
+section ::-webkit-input[type=text]:valid, section ::-webkit-input[type=email]:valid, section ::-webkit-input[type=password]:valid,
+section ::-ms-input[type=text]:valid, section ::-ms-input[type=email]:valid, section ::-ms-input[type=password]:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -554,25 +537,9 @@ section input:not(.login--button):valid {
   background-color: rgba(153, 226, 208, 0.5);
 }
 
-section ::-webkit-input:not(.login--button):valid {
-  font-size: 1.6rem;
-  outline: none;
-  border: 0;
-  border-bottom: 0;
-  padding: 1rem;
-  background-color: rgba(153, 226, 208, 0.5);
-}
-
-section ::-ms-input:not(.login--button):valid {
-  font-size: 1.6rem;
-  outline: none;
-  border: 0;
-  border-bottom: 0;
-  padding: 1rem;
-  background-color: rgba(153, 226, 208, 0.5);
-}
-
-section input:not(.login--button):focus:invalid {
+section input[type=text]:focus:invalid, section input[type=email]:focus:invalid, section input[type=password]:focus:invalid,
+section ::-webkit-input[type=text]:focus:invalid, section ::-webkit-input[type=email]:focus:invalid, section ::-webkit-input[type=password]:focus:invalid,
+section ::-ms-input[type=text]:focus:invalid, section ::-ms-input[type=email]:focus:invalid, section ::-ms-input[type=password]:focus:invalid {
   border: 0;
   border-bottom: 0.4rem #FF79DA solid;
   outline: none;
@@ -580,37 +547,14 @@ section input:not(.login--button):focus:invalid {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section ::-webkit-input:not(.login--button):focus:invalid {
-  border: 0;
-  border-bottom: 0.4rem #FF79DA solid;
-  outline: none;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-section ::-ms-input:not(.login--button):focus:invalid {
-  border: 0;
-  border-bottom: 0.4rem #FF79DA solid;
-  outline: none;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-section input:not(.login--button):required, section input:not(.login--button):required:invalid {
+section input[type=text]:required, section input[type=text]:required:invalid, section input[type=email]:required, section input[type=email]:required:invalid, section input[type=password]:required, section input[type=password]:required:invalid,
+section ::-webkit-input[type=text]:required,
+section ::-webkit-input[type=text]:required:invalid, section ::-webkit-input[type=email]:required, section ::-webkit-input[type=email]:required:invalid, section ::-webkit-input[type=password]:required, section ::-webkit-input[type=password]:required:invalid,
+section ::-ms-input[type=text]:required,
+section ::-ms-input[type=text]:required:invalid, section ::-ms-input[type=email]:required, section ::-ms-input[type=email]:required:invalid, section ::-ms-input[type=password]:required, section ::-ms-input[type=password]:required:invalid {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-section ::-webkit-input:not(.login--button):required, section input:not(.login--button):required:invalid {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-section ::-ms-input:not(.login--button):required, section input:not(.login--button):required:invalid {
-  outline: none;
-  box-shadow: none;
 }
 
 section .login--button {

@@ -118,16 +118,16 @@
     background-image: linear-gradient(#FF79DA, #9356DC);
     -webkit-box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
             box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
-    transform: scale(100%);
-    -webkit-transform: scale(100%);
+    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
   }
   to {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9BE3), to(#AE80E5));
     background-image: linear-gradient(#FF9BE3, #AE80E5);
     -webkit-box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
-    transform: scale(101%);
-    -webkit-transform: scale(101%);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -137,16 +137,16 @@
     background-image: linear-gradient(#FF79DA, #9356DC);
     -webkit-box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
             box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.1);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
   }
   to {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9BE3), to(#AE80E5));
     background-image: linear-gradient(#FF9BE3, #AE80E5);
-    -webkit-box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
-    transform: scale(101%);
-    -webkit-transform: scale(101%);
+    -webkit-box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -223,7 +223,6 @@ html {
 body, h1, h2, h3, h4, p {
   padding: 0;
   margin: 0;
-  margin-block: 0;
 }
 
 b, strong {

@@ -482,9 +482,9 @@ section label {
   text-transform: uppercase;
 }
 
-section input[type=text], section input[type=email], section input[type=password],
-section ::-webkit-input[type=text], section ::-webkit-input[type=email], section ::-webkit-input[type=password],
-section ::-ms-input[type=text], section ::-ms-input[type=email], section ::-ms-input[type=password] {
+section input[type=text],
+section input[type=email],
+section input[type=password] {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -493,9 +493,9 @@ section ::-ms-input[type=text], section ::-ms-input[type=email], section ::-ms-i
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input[type=text]:empty, section input[type=email]:empty, section input[type=password]:empty,
-section ::-webkit-input[type=text]:empty, section ::-webkit-input[type=email]:empty, section ::-webkit-input[type=password]:empty,
-section ::-ms-input[type=text]:empty, section ::-ms-input[type=email]:empty, section ::-ms-input[type=password]:empty {
+section input[type=text]:empty,
+section input[type=email]:empty,
+section input[type=password]:empty {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -504,9 +504,9 @@ section ::-ms-input[type=text]:empty, section ::-ms-input[type=email]:empty, sec
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input[type=text]:not(:placeholder-shown), section input[type=email]:not(:placeholder-shown), section input[type=password]:not(:placeholder-shown),
-section ::-webkit-input[type=text]:not(:placeholder-shown), section ::-webkit-input[type=email]:not(:placeholder-shown), section ::-webkit-input[type=password]:not(:placeholder-shown),
-section ::-ms-input[type=text]:not(:placeholder-shown), section ::-ms-input[type=email]:not(:placeholder-shown), section ::-ms-input[type=password]:not(:placeholder-shown) {
+section input[type=text]:not(:placeholder-shown),
+section input[type=email]:not(:placeholder-shown),
+section input[type=password]:not(:placeholder-shown) {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -515,9 +515,9 @@ section ::-ms-input[type=text]:not(:placeholder-shown), section ::-ms-input[type
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input[type=text]:focus:valid, section input[type=email]:focus:valid, section input[type=password]:focus:valid,
-section ::-webkit-input[type=text]:focus:valid, section ::-webkit-input[type=email]:focus:valid, section ::-webkit-input[type=password]:focus:valid,
-section ::-ms-input[type=text]:focus:valid, section ::-ms-input[type=email]:focus:valid, section ::-ms-input[type=password]:focus:valid {
+section input[type=text]:focus:valid,
+section input[type=email]:focus:valid,
+section input[type=password]:focus:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -526,9 +526,9 @@ section ::-ms-input[type=text]:focus:valid, section ::-ms-input[type=email]:focu
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input[type=text]:valid, section input[type=email]:valid, section input[type=password]:valid,
-section ::-webkit-input[type=text]:valid, section ::-webkit-input[type=email]:valid, section ::-webkit-input[type=password]:valid,
-section ::-ms-input[type=text]:valid, section ::-ms-input[type=email]:valid, section ::-ms-input[type=password]:valid {
+section input[type=text]:valid,
+section input[type=email]:valid,
+section input[type=password]:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -537,9 +537,9 @@ section ::-ms-input[type=text]:valid, section ::-ms-input[type=email]:valid, sec
   background-color: rgba(153, 226, 208, 0.5);
 }
 
-section input[type=text]:focus:invalid, section input[type=email]:focus:invalid, section input[type=password]:focus:invalid,
-section ::-webkit-input[type=text]:focus:invalid, section ::-webkit-input[type=email]:focus:invalid, section ::-webkit-input[type=password]:focus:invalid,
-section ::-ms-input[type=text]:focus:invalid, section ::-ms-input[type=email]:focus:invalid, section ::-ms-input[type=password]:focus:invalid {
+section input[type=text]:focus:invalid,
+section input[type=email]:focus:invalid,
+section input[type=password]:focus:invalid {
   border: 0;
   border-bottom: 0.4rem #FF79DA solid;
   outline: none;
@@ -547,11 +547,11 @@ section ::-ms-input[type=text]:focus:invalid, section ::-ms-input[type=email]:fo
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-section input[type=text]:required, section input[type=text]:required:invalid, section input[type=email]:required, section input[type=email]:required:invalid, section input[type=password]:required, section input[type=password]:required:invalid,
-section ::-webkit-input[type=text]:required,
-section ::-webkit-input[type=text]:required:invalid, section ::-webkit-input[type=email]:required, section ::-webkit-input[type=email]:required:invalid, section ::-webkit-input[type=password]:required, section ::-webkit-input[type=password]:required:invalid,
-section ::-ms-input[type=text]:required,
-section ::-ms-input[type=text]:required:invalid, section ::-ms-input[type=email]:required, section ::-ms-input[type=email]:required:invalid, section ::-ms-input[type=password]:required, section ::-ms-input[type=password]:required:invalid {
+section input[type=text]:required, section input[type=text]:required:invalid,
+section input[type=email]:required,
+section input[type=email]:required:invalid,
+section input[type=password]:required,
+section input[type=password]:required:invalid {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;

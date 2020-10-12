@@ -577,6 +577,10 @@ header img {
   -webkit-transition-delay: .5s;
 }
 
+#menu__content .menu__content__entrees__plates__box span[class$="__name"], #menu__content .menu__content__main_dishes__plates__box span[class$="__name"], #menu__content .menu__content__desserts__plates__box span[class$="__name"] {
+  font-weight: bold;
+}
+
 #menu__content .menu__content__entrees__plates__box .menu--flex, #menu__content .menu__content__main_dishes__plates__box .menu--flex, #menu__content .menu__content__desserts__plates__box .menu--flex {
   margin-top: .5rem;
   display: -webkit-box;
@@ -590,7 +594,7 @@ header img {
   min-width: 0;
 }
 
-#menu__content .menu__content__entrees__plates__box .menu--flex span, #menu__content .menu__content__main_dishes__plates__box .menu--flex span, #menu__content .menu__content__desserts__plates__box .menu--flex span {
+#menu__content .menu__content__entrees__plates__box .menu--flex span[class$="__description"], #menu__content .menu__content__main_dishes__plates__box .menu--flex span[class$="__description"], #menu__content .menu__content__desserts__plates__box .menu--flex span[class$="__description"] {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -604,7 +608,7 @@ header img {
   -webkit-transition-delay: .5s;
 }
 
-#menu__content .menu__content__entrees__plates__box .menu--flex h4, #menu__content .menu__content__main_dishes__plates__box .menu--flex h4, #menu__content .menu__content__desserts__plates__box .menu--flex h4 {
+#menu__content .menu__content__entrees__plates__box .menu--flex span[class$="__price"], #menu__content .menu__content__main_dishes__plates__box .menu--flex span[class$="__price"], #menu__content .menu__content__desserts__plates__box .menu--flex span[class$="__price"] {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -650,7 +654,7 @@ header img {
   margin-right: 3rem;
 }
 
-#menu__content .menu__content__entrees__plates__box:hover span, #menu__content .menu__content__main_dishes__plates__box:hover span, #menu__content .menu__content__desserts__plates__box:hover span {
+#menu__content .menu__content__entrees__plates__box:hover span[class$="__description"], #menu__content .menu__content__main_dishes__plates__box:hover span[class$="__description"], #menu__content .menu__content__desserts__plates__box:hover span[class$="__description"] {
   width: calc(65vw - 3rem);
 }
 

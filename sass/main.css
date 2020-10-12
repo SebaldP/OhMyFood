@@ -615,6 +615,7 @@ header img {
 #restaurants {
   padding: 4rem 2rem 4rem 2rem;
   background-color: #F6F6F6;
+  counter-reset: heart_counter;
 }
 
 #restaurants h3 {
@@ -653,7 +654,7 @@ header img {
   font-size: 1.6rem;
 }
 
-#restaurants .restaurants--text .heart {
+#restaurants .restaurants--text #heart1, #restaurants .restaurants--text #heart2, #restaurants .restaurants--text #heart3, #restaurants .restaurants--text #heart4 {
   position: absolute;
   top: 2.5rem;
   right: 2rem;
@@ -661,27 +662,63 @@ header img {
   cursor: pointer;
 }
 
-#restaurants .restaurants--text .heart--body {
+#restaurants .restaurants--text #heart1 .heart--body, #restaurants .restaurants--text #heart2 .heart--body, #restaurants .restaurants--text #heart3 .heart--body, #restaurants .restaurants--text #heart4 .heart--body {
   fill: #353535;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 
-#restaurants .restaurants--text .heart--center {
+#restaurants .restaurants--text #heart1 .heart--center, #restaurants .restaurants--text #heart2 .heart--center, #restaurants .restaurants--text #heart3 .heart--center, #restaurants .restaurants--text #heart4 .heart--center {
   fill: white;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 
-#restaurants .restaurants--text .heart:hover {
+#restaurants .restaurants--text #heart1:hover {
   cursor: pointer;
 }
 
-#restaurants .restaurants--text .heart:hover .heart--body {
-  fill: url(.MyGradient);
+#restaurants .restaurants--text #heart1:hover .heart--body {
+  fill: url(#MyGradient1);
 }
 
-#restaurants .restaurants--text .heart:hover .heart--center {
+#restaurants .restaurants--text #heart1:hover .heart--center {
+  opacity: 0;
+}
+
+#restaurants .restaurants--text #heart2:hover {
+  cursor: pointer;
+}
+
+#restaurants .restaurants--text #heart2:hover .heart--body {
+  fill: url(#MyGradient2);
+}
+
+#restaurants .restaurants--text #heart2:hover .heart--center {
+  opacity: 0;
+}
+
+#restaurants .restaurants--text #heart3:hover {
+  cursor: pointer;
+}
+
+#restaurants .restaurants--text #heart3:hover .heart--body {
+  fill: url(#MyGradient3);
+}
+
+#restaurants .restaurants--text #heart3:hover .heart--center {
+  opacity: 0;
+}
+
+#restaurants .restaurants--text #heart4:hover {
+  cursor: pointer;
+}
+
+#restaurants .restaurants--text #heart4:hover .heart--body {
+  fill: url(#MyGradient4);
+}
+
+#restaurants .restaurants--text #heart4:hover .heart--center {
   opacity: 0;
 }
 

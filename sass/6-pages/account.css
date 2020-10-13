@@ -484,7 +484,8 @@ section label {
 
 section input[type=text],
 section input[type=email],
-section input[type=password] {
+section input[type=password],
+section input:not(.login--button) {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -495,7 +496,8 @@ section input[type=password] {
 
 section input[type=text]:empty,
 section input[type=email]:empty,
-section input[type=password]:empty {
+section input[type=password]:empty,
+section input:not(.login--button):empty {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -506,7 +508,8 @@ section input[type=password]:empty {
 
 section input[type=text]:not(:placeholder-shown),
 section input[type=email]:not(:placeholder-shown),
-section input[type=password]:not(:placeholder-shown) {
+section input[type=password]:not(:placeholder-shown),
+section input:not(.login--button):not(:placeholder-shown) {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -517,7 +520,8 @@ section input[type=password]:not(:placeholder-shown) {
 
 section input[type=text]:focus:valid,
 section input[type=email]:focus:valid,
-section input[type=password]:focus:valid {
+section input[type=password]:focus:valid,
+section input:not(.login--button):focus:valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -528,7 +532,8 @@ section input[type=password]:focus:valid {
 
 section input[type=text]:valid,
 section input[type=email]:valid,
-section input[type=password]:valid {
+section input[type=password]:valid,
+section input:not(.login--button):valid {
   font-size: 1.6rem;
   outline: none;
   border: 0;
@@ -539,7 +544,8 @@ section input[type=password]:valid {
 
 section input[type=text]:focus:invalid,
 section input[type=email]:focus:invalid,
-section input[type=password]:focus:invalid {
+section input[type=password]:focus:invalid,
+section input:not(.login--button):focus:invalid {
   border: 0;
   border-bottom: 0.4rem #FF79DA solid;
   outline: none;
@@ -551,7 +557,9 @@ section input[type=text]:required, section input[type=text]:required:invalid,
 section input[type=email]:required,
 section input[type=email]:required:invalid,
 section input[type=password]:required,
-section input[type=password]:required:invalid {
+section input[type=password]:required:invalid,
+section input:not(.login--button):required,
+section input:not(.login--button):required:invalid {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;

@@ -413,7 +413,8 @@ body {
 }
 
 body h1 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  font-weight: 900;
 }
 
 header {
@@ -651,6 +652,7 @@ header img {
 #restaurants .restaurants--text h2 {
   display: block;
   font-size: 1.6rem;
+  font-weight: 900;
 }
 
 #restaurants .restaurants--text #heart1, #restaurants .restaurants--text #heart2, #restaurants .restaurants--text #heart3, #restaurants .restaurants--text #heart4 {
